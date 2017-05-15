@@ -2,7 +2,7 @@ package ru.ridersbook.ui.quote;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,15 +10,13 @@ import android.widget.ListView;
 
 import ru.ridersbook.R;
 import ru.ridersbook.dummy.DummyContent;
-import ru.ridersbook.ui.base.BaseActivity;
-import ru.ridersbook.util.LogUtil;
 
 /**
  * Lists all available quotes. This Activity supports a single pane (= smartphones) and a two pane mode (= large screens with >= 600dp width).
  *
  * Created by Andreas Schrade on 14.12.2015.
  */
-public class MainActivity extends BaseActivity implements ArticleListFragment.Callback {
+public class MainActivity extends AppCompatActivity implements ArticleListFragment.Callback {
     /**
      * Whether or not the activity is running on a device with a large screen
      */
@@ -71,11 +69,11 @@ public class MainActivity extends BaseActivity implements ArticleListFragment.Ca
         }
     }
 
-    private void setupToolbar() {
+    /*private void setupToolbar() {
         final ActionBar ab = getActionBarToolbar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
         ab.setDisplayHomeAsUpEnabled(true);
-    }
+    }*/
 
     private void setupDetailFragment() {
         ArticleDetailFragment fragment =  ArticleDetailFragment.newInstance(DummyContent.ITEMS.get(0).id);
@@ -104,19 +102,19 @@ public class MainActivity extends BaseActivity implements ArticleListFragment.Ca
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                openDrawer();
+                //openDrawer();
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected int getSelfNavDrawerItem() {
-        return R.id.nav_quotes;
-    }
-
-    @Override
-    public boolean providesActivityToolbar() {
-        return true;
-    }
+//    @Override
+//    protected int getSelfNavDrawerItem() {
+//        return R.id.nav_quotes;
+//    }
+//
+//    @Override
+//    public boolean providesActivityToolbar() {
+//        return true;
+//    }
 }
