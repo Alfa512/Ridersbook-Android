@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context="ru.ridersbook.ui.quote.MainActivity"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     >
 
     <include
@@ -17,9 +18,11 @@
 
         android:visibility="visible"
         tools:layout_editor_absoluteY="0dp"
-        android:id="@+id/include"
+
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/main_toolbar"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <include layout="@layout/include_navigation"
         android:layout_height="0dp"
@@ -35,7 +38,7 @@
         android:background="@null"
         app:srcCompat="@drawable/start_btn_128"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
@@ -45,7 +48,7 @@
         android:contentDescription="@string/start_btn_description" />
 
     <TextView
-        android:id="@+id/SpeedLable"
+        android:id="@+id/speed_label"
         android:layout_width="239dp"
         android:layout_height="81dp"
         android:layout_marginEnd="8dp"
@@ -58,11 +61,13 @@
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        tools:text="0.00" />
+        tools:text="0.00"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
 
     <TextView
-        android:id="@+id/AvgSpeedLable"
+        android:id="@+id/AvgSpeedLabel"
         android:layout_width="130dp"
         android:layout_height="42dp"
         android:layout_marginRight="8dp"
@@ -73,14 +78,14 @@
         tools:text="@string/zero_dash_value"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/SpeedLable"
+        app:layout_constraintHorizontal_bias="1.0"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/speed_label" />
 
     <TextView
-        android:id="@+id/DistanceLable"
+        android:id="@+id/DistanceLabel"
         android:layout_width="130dp"
         android:layout_height="42dp"
         android:layout_marginLeft="8dp"
@@ -88,13 +93,21 @@
         android:text="@string/zero_dash_value"
         android:textAlignment="center"
         android:textSize="36sp"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:text="0.00"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/SpeedLable"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/speed_label" />
+
+    <!--<include-->
+        <!--layout="@layout/include_toolbar"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--tools:layout_editor_absoluteY="0dp"-->
+        <!--tools:layout_editor_absoluteX="8dp" />-->
 
 </android.support.constraint.ConstraintLayout>
+

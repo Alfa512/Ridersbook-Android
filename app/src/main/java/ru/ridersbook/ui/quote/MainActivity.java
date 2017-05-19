@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import ru.ridersbook.R;
 import ru.ridersbook.dummy.DummyContent;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements ArticleListFragme
 
         setContentView(R.layout.activity_main);
 
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mainToolbar);
 
         //setupToolbar();
@@ -104,6 +105,11 @@ public class MainActivity extends AppCompatActivity implements ArticleListFragme
             case android.R.id.home:
                 //openDrawer();
                 return true;
+            case R.id.nav_quotes:
+                TextView speedLabel = (TextView) findViewById(R.id.speed_label);
+                speedLabel.setText("64.0");
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
