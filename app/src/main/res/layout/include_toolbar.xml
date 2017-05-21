@@ -5,9 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:theme="@style/Toolbar"
-    app:contentInsetStart="72dp"
-    app:popupTheme="@style/ToolbarPopUp" >
+    android:layout_height="?android:actionBarSize"
+    android:background="@color/theme_primary_dark"
+    android:theme="@style/Toolbar">
+    <!--app:contentInsetStart="72dp"-->
+    <!--app:popupTheme="@style/ToolbarPopUp" -->
 
     </android.support.v7.widget.Toolbar>

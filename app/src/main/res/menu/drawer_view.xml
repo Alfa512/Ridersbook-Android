@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--<item-->
-        <!--android:id="@+id/miCompose"-->
-        <!--android:icon="@drawable/ic_compose"-->
-        <!--app:showAsAction="ifRoom"-->
-        <!--android:title="Compose">-->
-    <!--</item>-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:yourapp="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/sidebar_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_toolbar_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        yourapp:showAsAction="always"
+        />
+    <item
+        android:id="@+id/action_search"
+        android:title="@android:string/search_go"
+        android:icon="@string/fa_icon_toolbar_search"
+        yourapp:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/action_edit"
+        android:title="@string/action_garage"
+        android:icon="@string/fa_icon_toolbar_edit"
+        yourapp:showAsAction="ifRoom" />
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_quotes"

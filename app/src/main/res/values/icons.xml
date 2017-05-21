@@ -3,4 +3,7 @@
     <string name="fa_icon_areachart">&#xf1fe;</string>
     <string name="fa_icon_piechart">&#xf200;</string>
     <string name="fa_icon_linechart">&#xf201;</string>
+
+    <string name="fa_icon_toolbar_search">&#xf201;</string>
+    <string name="fa_icon_toolbar_edit">&#xf201;</string>
 </resources>

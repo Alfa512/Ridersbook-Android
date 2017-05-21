@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+
+    >
+    <item
+        android:id="@+id/action_search"
+        android:title="@android:string/search_go"
+        android:icon="@drawable/icon_toolbar_search"
+        yourapp:showAsAction="always|collapseActionView"
+        yourapp:actionViewClass="android.support.v7.widget.SearchView" />
+    <item
+        android:id="@+id/action_micro"
+        android:title="@string/action_statistic"
+        android:icon="@drawable/icon_toolbar_micro"
+        yourapp:showAsAction="always" />
+    <item
+        android:id="@+id/action_remove"
+        android:title="@string/action_track"
+        android:icon="@drawable/icon_toolbar_remove"
+        yourapp:showAsAction="always" />
+    <item
+        android:id="@+id/action_garage"
+        android:title="@string/action_garage"
+        android:text="@string/fa_icon_toolbar_edit"
+        />
+    <item
+        android:id="@+id/action_garage2"
+        android:text="@string/fa_icon_toolbar_edit"
+        android:title="@string/action_garage" />
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+        </menu>
+    </item>
+</menu>
